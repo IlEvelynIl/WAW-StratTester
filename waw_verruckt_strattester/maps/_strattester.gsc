@@ -179,6 +179,11 @@ calculate_zombie_health()
 			level.zombie_health = Int( level.zombie_health + level.zombie_vars["zombie_health_increase"] ); 
 		}
 	}
+
+	if ( level.zombie_health <= 0 )
+	{
+		level.zombie_health = level.zombie_vars["zombie_health_start"]; 
+	}
 }
 
 calculate_zombie_speed()
