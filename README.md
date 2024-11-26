@@ -6,7 +6,7 @@ A mod for strat testing in Call of Duty: World at War.
 2. Extract the mods for each map to your mods folder, it is different if you are on Plutonium or Steam. If the mods folder does not exist, create it.
     - Steam: `%localappdata%\Activision\CoDWAW\mods`
     - Plutonium: `%localappdata%\Plutonium\storage\t4\mods`
-3. Select the mod for the map you're wanting to strat test, and click "Solo", it will automatically load the zombies map the mod was made for.
+3. Select the mod for the map you're wanting to strat test, and click `Solo`, it will automatically load into the map the mod was made for.
     - You can change the strat tester settings by going to the ingame `Game Options` menu.
 
 ## Features
