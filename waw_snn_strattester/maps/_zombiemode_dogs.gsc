@@ -601,7 +601,7 @@ dog_fx_trail()
 dog_death()
 {
 	self waittill( "death" );
-
+	level.global_zombies_killed_round++;
 	if( get_enemy_count() == 0 && level.zombie_total == 0 )
 	{
 
