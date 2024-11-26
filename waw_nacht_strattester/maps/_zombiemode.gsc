@@ -83,7 +83,6 @@ main()
 	// Start the Zombie MODE!
 	level thread round_start();
 	level thread players_playing();
-	level thread maps\_strattester::pre_init();
 
 	DisableGrenadeSuicide();
 

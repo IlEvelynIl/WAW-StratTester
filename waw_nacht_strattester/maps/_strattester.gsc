@@ -6,9 +6,7 @@ init_st_dvars()
     init_dvar( "st_fixed_backspeed", "1", true );
 	init_dvar( "st_open_barriers", "1" ); // restart
 	init_dvar( "st_open_doors", "1" ); // restart
-	init_dvar( "st_power", "1" ); // restart
     init_dvar( "st_give_weapons", "1" ); // restart
-    init_dvar( "st_give_perks", "1"); // restart
 
 	init_dvar( "st_total_timer_hud", "1", true );
 	init_dvar( "st_round_timer_hud", "1", true );
@@ -54,14 +52,14 @@ watch_dvar(dvar)
 
 on_player_spawn()
 {
-	if ( GetDvar( "st_give_perks" ) == "1" && level.script != "nazi_zombie_prototype" )
+	if ( GetDvar( "st_open_barriers" ) == "1" )
 	{
-		self give_player_perks();
+		level thread maps\_strattester_util::break_all_barriers();
 	}
 
 	if ( GetDvar( "st_give_weapons" ) == "1" )
 	{
-		self give_player_weapons();
+		self thread give_player_weapons();
 	}
 
 	self thread maps\_strattester_hud::total_timer_hud();
@@ -94,22 +92,6 @@ on_player_spawn()
 	}
 }
 
-pre_init()
-{
-	wait( 2 );
-
-	map_has_power = level.script == "nazi_zombie_asylum" || level.script == "nazi_zombie_factory";
-	if ( GetDvar( "st_power" ) == "1" && map_has_power )
-	{
-		level thread maps\_strattester_util::turn_on_power();
-	}
-
-	if ( GetDvar( "st_open_barriers" ) == "1" )
-	{
-		level thread maps\_strattester_util::break_all_barriers();
-	}
-}
-
 backspeed_watcher()
 {
 	level endon("end_game");
@@ -125,23 +107,6 @@ backspeed_watcher()
 
 	level waittill("st_fixed_backspeed_changed");
 	self thread backspeed_watcher();
-}
-
-give_player_perks()
-{
-	self endon( "disconnect" );
-
-    wait(0.2);
-    self maps\_strattester_util::give_perk( "specialty_armorvest" );
-
-    wait(0.2);
-    self maps\_strattester_util::give_perk( "specialty_fastreload" );
-
-    wait(0.2);
-    self maps\_strattester_util::give_perk( "specialty_rof ");
-
-    wait(0.2);
-    self maps\_strattester_util::give_perk( "specialty_quickrevive" );
 }
 
 give_player_weapons()
