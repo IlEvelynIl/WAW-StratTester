@@ -33,3 +33,8 @@ Some features may require require a map restart.
 - Set starting round
 - Set a round starting delay to navigate to where you need to start the round at game start
 - Toggle the behavior of insta-kill rounds
+
+## Credits
+- Wonder - Asking me to do this in the first place
+- JBShady - WAW Remastered/Code references
+- 5and5 (and other contributors) - BO1 Strat Tester
