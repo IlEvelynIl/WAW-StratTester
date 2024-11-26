@@ -226,7 +226,10 @@ vending_trigger_think()
 	//self UseTriggerRequireLookAt();
 
 	notify_name = perk + "_power_on";
-	//level waittill( notify_name );
+	if ( GetDvar("st_power") == "0" )
+	{
+		level waittill( notify_name );
+	}
 
 	self thread check_player_has_perk(perk);
 	self vending_set_hintstring(perk);
