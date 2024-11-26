@@ -1,5 +1,5 @@
 # WAW-StratTester
-A mod for strat testing in Call of Duty: World at War Zombies
+A mod for strat testing in Call of Duty: World at War.
 
 ## Installing
 1. Head to the [Releases](https://github.com/IlEvelynIl/WAW-StratTester/releases) page and download the latest version's zip file.
