@@ -3,6 +3,16 @@ A mod for strat testing in Call of Duty: World at War Zombies
 
 ## Installing
 
+### Steam
+Extract the strat tester mod for each map into `%localappdata%\Activision\CoDWAW\mods`
+
+If the mods folder does not exist, create one.
+
+### Plutonium
+Extract the strat tester mod for each map into `%localappdata%\Plutonium\storage\t4\mods`.
+
+If the mods folder does not exist, create one.
+
 ## Features
 Not every feature is on every map, such as the zone hud on Nacht.
 
