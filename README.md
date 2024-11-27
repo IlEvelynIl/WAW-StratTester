@@ -3,7 +3,7 @@ A mod for strat testing in Call of Duty: World at War.
 
 ## Installing
 1. Head to the [Releases](https://github.com/IlEvelynIl/WAW-StratTester/releases) page and download the latest version's zip file.
-2. Extract the mods for each map to your mods folder, it is different if you are on Plutonium or Steam. If the mods folder does not exist, create it.
+2. Extract the mods for each map to your mods folder. Heads up, the path is different for Plutonium and Steam. If the mods folder does not exist, create it.
     - Steam: `%localappdata%\Activision\CoDWAW\mods`
     - Plutonium: `%localappdata%\Plutonium\storage\t4\mods`
 3. Select the mod for the map you're wanting to strat test, and click `Solo`, it will automatically load into the map the mod was made for.
