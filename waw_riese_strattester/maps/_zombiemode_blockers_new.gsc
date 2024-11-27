@@ -10,7 +10,7 @@ init()
 
 	//////////////////////////////////////////
 	//designed by prod
-	//set_zombie_var( "rebuild_barrier_cap_per_round", 500 );
+	set_zombie_var( "rebuild_barrier_cap_per_round", 500 );
 	//////////////////////////////////////////
 }
 
@@ -765,12 +765,12 @@ blocker_trigger_think()
 			{
 				break;
 			}
-	
+
 			if ( !IsDefined( player.rebuild_barrier_reward ) )
 			{
 				player.rebuild_barrier_reward = 0;
 			}
-
+	
 			// set the score
 			player.rebuild_barrier_reward += cost;
 			if( player.rebuild_barrier_reward < level.zombie_vars["rebuild_barrier_cap_per_round"] )

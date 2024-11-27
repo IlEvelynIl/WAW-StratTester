@@ -2052,6 +2052,7 @@ round_think()
 	level.round_number = GetDvarInt("st_round_number");
 	level.next_dog_round = level.round_number + 1;
 	level.dog_round_count = 5;
+	level.dog_health = 1600;
 
 	maps\_strattester::round_pause( GetDvarInt( "st_round_start_delay" ) );
 

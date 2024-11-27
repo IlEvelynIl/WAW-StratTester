@@ -42,6 +42,7 @@ get_current_zone()
 {
     zkeys = GetArrayKeys( level.zones );
     zone_name = "";
+    
     for ( i = 0; i < zkeys.size; i++ )
     {
         zone = zkeys[i];

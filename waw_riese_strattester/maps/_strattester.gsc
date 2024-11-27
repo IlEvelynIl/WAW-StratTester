@@ -10,18 +10,21 @@ init_st_dvars()
     init_dvar( "st_give_weapons", "1" ); // restart
     init_dvar( "st_give_perks", "1"); // restart
 
-	init_dvar( "st_total_timer_hud", "1", true );
-	init_dvar( "st_round_timer_hud", "1", true );
-	init_dvar( "st_remaining_hud", "0", true );
-	init_dvar( "st_sph_hud", "0", true );
-	init_dvar( "st_health_hud", "0", true );
-	init_dvar( "st_zone_hud", "0", true );
+	init_dvar( "st_total_timer_hud", "1" );
+	init_dvar( "st_round_timer_hud", "1" );
+	init_dvar( "st_remaining_hud", "0" );
+	init_dvar( "st_sph_hud", "0" );
+	init_dvar( "st_zone_hud", "0" );
 
 	init_dvar( "st_round_number", "100" );
 	init_dvar( "st_round_start_delay", "5" );
 	init_dvar( "st_insta_kill", "0" );
 
-	level.kills_last_60_seconds = 0;
+	SetDvar("st_total_timer_value", "0:00");
+	SetDvar("st_round_timer_value", "0:00");
+	SetDvar("st_remaining_hud_value", "0");
+	SetDvar("st_sph_hud_value", "0");
+	SetDvar("st_zone_hud_value", "None");
 }
 
 init_dvar( dvar, value, watch )
@@ -83,11 +86,7 @@ on_player_spawn()
 
 	self thread maps\_strattester_hud::sph_hud();
 
-	map_has_zones = level.script == "nazi_zombie_sumpf" || level.script == "nazi_zombie_factory";
-	if ( map_has_zones && GetDvar( "st_zone_hud" ) == "1" )
-	{
-		self thread maps\_strattester_hud::zone_hud();
-	}
+	self thread maps\_strattester_hud::zone_hud();
 
 	self thread backspeed_watcher();
 

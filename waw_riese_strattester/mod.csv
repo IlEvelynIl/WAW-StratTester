@@ -1,3 +1,5 @@
 menufile,ui/main.menu
 menufile,ui/options_game_pc.menu
 menufile,ui_mp/leftside_options.inc
+menufile,ui/hud.txt
+menufile,ui/strat_tester.menu

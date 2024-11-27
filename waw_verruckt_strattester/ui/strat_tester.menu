@@ -1,0 +1,123 @@
+#include "ui/menudef.h"
+
+{
+    menuDef
+	{
+		name				"total_timer_hud"
+		rect				0 0 0 0 HORIZONTAL_ALIGN_RIGHT VERTICAL_ALIGN_TOP
+		fullscreen			0
+		visible				when(dvarString("st_total_timer_hud") == "1")
+
+		itemDef
+		{
+			name				"total_timer_text"
+			type				ITEM_TYPE_TEXT
+			rect 				-5 3 0 0
+            exp                 rect Y(25)
+			forecolor			1 1 1 1
+			textscale			TEXTSIZE_DEFAULT
+			textstyle			ITEM_TEXTSTYLE_SHADOWED
+			textfont			UI_FONT_NORMAL
+			textalign			ITEM_ALIGN_TOP_RIGHT
+			exp 				text("Total Time: " + dvarString("st_total_timer_value"))
+			visible				1
+			decoration
+		}
+	}
+
+    menuDef
+	{
+		name				"round_timer_hud"
+		rect				0 0 0 0 HORIZONTAL_ALIGN_RIGHT VERTICAL_ALIGN_TOP
+		fullscreen			0
+		visible				when(dvarString("st_round_timer_hud") == "1")
+
+		itemDef
+		{
+			name				"round_timer_text"
+			type				ITEM_TYPE_TEXT
+			rect 				-5 3 0 0
+            exp                 rect Y(42)
+			forecolor			1 1 1 1
+			textscale			TEXTSIZE_DEFAULT
+			textstyle			ITEM_TEXTSTYLE_SHADOWED
+			textfont			UI_FONT_NORMAL
+			textalign			ITEM_ALIGN_TOP_RIGHT
+			exp 				text("Round Time: " + dvarString("st_round_timer_value"))
+			visible				1
+			decoration
+		}
+	}
+
+    menuDef
+	{
+		name				"remaining_hud"
+		rect				0 0 0 0 HORIZONTAL_ALIGN_LEFT VERTICAL_ALIGN_TOP
+		fullscreen			0
+		visible				when(dvarString("st_remaining_hud") == "1")
+
+		itemDef
+		{
+			name				"remaining_hud_text"
+			type				ITEM_TYPE_TEXT
+			rect 				3 3 0 0
+            exp                 rect Y(2)
+			forecolor			1 1 1 1
+			textscale			TEXTSIZE_DEFAULT
+			textstyle			ITEM_TEXTSTYLE_SHADOWED
+			textfont			UI_FONT_NORMAL
+			textalign			ITEM_ALIGN_TOP_LEFT
+			exp 				text("Remaining: " + dvarString("st_remaining_hud_value"))
+			visible				1
+			decoration
+		}
+	}
+
+    menuDef
+	{
+		name				"sph_hud"
+		rect				0 0 0 0 HORIZONTAL_ALIGN_LEFT VERTICAL_ALIGN_TOP
+		fullscreen			0
+		visible				when(dvarString("st_sph_hud") == "1")
+
+		itemDef
+		{
+			name				"sph_hud_text"
+			type				ITEM_TYPE_TEXT
+			rect 				3 3 0 0
+            exp                 rect Y(17)
+			forecolor			1 1 1 1
+			textscale			TEXTSIZE_DEFAULT
+			textstyle			ITEM_TEXTSTYLE_SHADOWED
+			textfont			UI_FONT_NORMAL
+			textalign			ITEM_ALIGN_TOP_LEFT
+			exp 				text("SPH: " + dvarString("st_sph_hud_value"))
+			visible				1
+			decoration
+		}
+	}
+
+    menuDef
+	{
+		name				"zone_hud"
+		rect				0 0 0 0 HORIZONTAL_ALIGN_LEFT VERTICAL_ALIGN_TOP
+		fullscreen			0
+		visible				when(dvarString("st_zone_hud") == "1")
+
+		itemDef
+		{
+			name				"zone_hud_text"
+			type				ITEM_TYPE_TEXT
+			rect 				3 3 0 0
+            exp                 rect Y(32)
+			forecolor			1 1 1 1
+			textscale			TEXTSIZE_DEFAULT
+			textstyle			ITEM_TEXTSTYLE_SHADOWED
+			textfont			UI_FONT_NORMAL
+			textalign			ITEM_ALIGN_TOP_LEFT
+			exp 				text("Zone: " + dvarString("st_zone_hud_value"))
+			visible				1
+			decoration
+		}
+	}
+}

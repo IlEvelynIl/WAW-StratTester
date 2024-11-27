@@ -1952,8 +1952,8 @@ shouldShowCoverWarning()
 	if ( level.missionfailed )
 		return false;
 	
-	if ( !maps\_load::map_is_early_in_the_game() )
-		return false;
+	// if ( !maps\_load::map_is_early_in_the_game() )
+	// 	return false;
 
 	if ( isSplitScreen() || coopGame() )
 		return false;
@@ -1964,7 +1964,7 @@ shouldShowCoverWarning()
 	if ( takeCoverWarnings <= 3 )
 		return false;
 
-	return true;
+	return false;
 }
 
 

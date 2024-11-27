@@ -1,0 +1,8 @@
+// hud menu defs
+// 
+{
+	loadMenu { "ui/hud.menu" }
+	loadMenu { "ui/strat_tester.menu" }
+	loadMenu { "ui/objective_info.menu" }
+}
+

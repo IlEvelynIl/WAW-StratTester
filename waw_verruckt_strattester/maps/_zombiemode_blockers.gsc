@@ -9,7 +9,7 @@ init()
 
 	//////////////////////////////////////////
 	//designed by prod
-	//set_zombie_var( "rebuild_barrier_cap_per_round", 500 );
+	set_zombie_var( "rebuild_barrier_cap_per_round", 500 );
 	//////////////////////////////////////////
 } 
 
